@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
+    job:
+      enabled: false
+  cloud:
+    aws:
+      region:
+        static: us-east-1  # Set your AWS region here
+      credentials:
+        access-key: test
+        secret-key: test
+      sqs:
+        enabled: true
+        endpoint: http://localhost:4566
+server:
+  port: 9090
