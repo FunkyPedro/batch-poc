@@ -8,7 +8,6 @@ import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.integration.config.annotation.EnableBatchIntegration;
 import org.springframework.batch.integration.partition.RemotePartitioningManagerStepBuilderFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -21,7 +20,6 @@ import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.json.ObjectToJsonTransformer;
 import org.springframework.messaging.MessageChannel;
 import com.example.demo.UuidColumnRangePartitioner;
-import org.springframework.transaction.PlatformTransactionManager;
 import software.amazon.awssdk.services.sqs.SqsAsyncClient;
 
 /*

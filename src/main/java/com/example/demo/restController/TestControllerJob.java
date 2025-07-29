@@ -14,28 +14,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/trigger")
-@RequiredArgsConstructor
-@Profile("manager")
-public class TriggerJob {
+import java.time.LocalDateTime;
 
-    private final JobLauncher jobLauncher;
-    private final  Job job;
+@RestController
+@RequestMapping("/test")
+@RequiredArgsConstructor
+@Profile("LOCAL")
+public class TestControllerJob {
 
     @PostMapping
     public void triggerJob(){
-        JobParameters jobParameters = new JobParametersBuilder()
-                .addLong("startAt", System.currentTimeMillis())
-                .toJobParameters();
-        try {
-            jobLauncher.run(job, jobParameters);
-        } catch (JobExecutionAlreadyRunningException
-                 | JobRestartException
-                 | JobInstanceAlreadyCompleteException
-                 | JobParametersInvalidException e) {
-            e.printStackTrace();
-        }
+        System.out.println("###########################");
+        System.out.println(LocalDateTime.now());
+        System.out.println("###########################");
     }
 
 }
