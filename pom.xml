@@ -132,6 +132,10 @@
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>aws-json-protocol</artifactId>
         </dependency>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>eventbridge</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/trigger")
 @RequiredArgsConstructor
-@Profile("manager")
+//@Profile("batch")
 public class TriggerJob {
 
     private final JobLauncher jobLauncher;

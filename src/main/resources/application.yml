@@ -20,5 +20,8 @@ spring:
       sqs:
         enabled: true
         endpoint: http://localhost:4566
+      eventbridge:
+        enabled: true
+        endpoint: http://localhost:4566
 server:
   port: 9090
